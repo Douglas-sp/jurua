@@ -54,7 +54,7 @@ const Hero = () => {
             {/* Profile image container with neon border */}
             <div className="w-full h-full rounded-full overflow-hidden neon-border p-1 animate-pulse-glow">
               <img
-                src="/lovable-uploads/profile-pic.jpg"
+                src="/public/mick dp.jpeg"
                 alt="Michael Jurua"
                 className="w-full h-full rounded-full object-cover bg-space-light"
                 loading="eager"
