@@ -52,11 +52,14 @@ const Hero = () => {
         >
           <div className="absolute inset-0 bg-blue-glow opacity-20 rounded-full blur-xl"></div>
           <div className="relative w-full h-full aspect-square max-w-md mx-auto">
-            {/* Circular profile placeholder with animated border */}
+            {/* Profile image container with neon border */}
             <div className="w-full h-full rounded-full overflow-hidden neon-border p-1 animate-pulse-glow">
-              <div className="w-full h-full rounded-full bg-space-light flex items-center justify-center">
-                <span className="text-4xl font-bold text-neon-blue">MJ</span>
-              </div>
+              <img
+                src="/profile-pic.jpg"
+                alt="Michael Jurua"
+                className="w-full h-full rounded-full object-cover"
+                loading="eager"
+              />
             </div>
             
             {/* Floating elements */}
