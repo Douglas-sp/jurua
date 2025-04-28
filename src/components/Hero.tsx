@@ -1,3 +1,4 @@
+
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
@@ -54,9 +55,9 @@ const Hero = () => {
             {/* Profile image container with neon border */}
             <div className="w-full h-full rounded-full overflow-hidden neon-border p-1 animate-pulse-glow">
               <img
-                src="/public/mick dp.jpeg"
+                src="/lovable-uploads/00d70263-22ab-49e4-bc5a-7234caeb3502.png"
                 alt="Michael Jurua"
-                className="w-full h-full rounded-full object-cover bg-space-light"
+                className="w-full h-full rounded-full object-cover bg-gray-800"
                 loading="eager"
                 onError={(e) => {
                   e.currentTarget.src = "/placeholder.svg";
