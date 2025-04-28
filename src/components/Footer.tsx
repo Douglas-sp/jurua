@@ -1,7 +1,6 @@
-
 import React from "react";
 import { motion } from "framer-motion";
-import { Linkedin, Mail, WhatsApp } from "lucide-react";
+import { Linkedin, Mail, MessageCircle } from "lucide-react";
 import { Separator } from "./ui/separator";
 
 const Footer = () => {
@@ -54,7 +53,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-gray-400 hover:text-satellite transition-colors text-sm"
               >
-                <WhatsApp size={16} />
+                <MessageCircle size={16} />
                 +256 783 067 926
               </a>
               <a 
