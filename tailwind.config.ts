@@ -67,8 +67,8 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				forest: {
-					DEFAULT: '#3A6B49',
-					light: '#4C8861',
+					DEFAULT: '#4A7C59',
+					light: '#5E9E6F',
 					dark: '#2A4F36',
 				},
 				earth: {

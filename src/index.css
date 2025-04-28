@@ -1,37 +1,36 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 120 30% 12%;
+    --background: 120 30% 18%;
     --foreground: 120 15% 98%;
 
-    --card: 120 30% 15%;
+    --card: 120 30% 20%;
     --card-foreground: 120 15% 98%;
 
-    --popover: 120 30% 12%;
+    --popover: 120 30% 18%;
     --popover-foreground: 120 15% 98%;
 
-    --primary: 120 40% 25%;
+    --primary: 120 40% 35%;
     --primary-foreground: 120 15% 98%;
 
-    --secondary: 30 75% 31%;
+    --secondary: 30 75% 35%;
     --secondary-foreground: 120 15% 98%;
 
-    --muted: 120 15% 20%;
+    --muted: 120 15% 25%;
     --muted-foreground: 120 10% 75%;
 
     --accent: 210 100% 55%;
     --accent-foreground: 120 15% 98%;
 
-    --destructive: 0 62% 30%;
+    --destructive: 0 62% 35%;
     --destructive-foreground: 120 15% 98%;
 
-    --border: 120 15% 20%;
-    --input: 120 15% 20%;
-    --ring: 120 40% 25%;
+    --border: 120 15% 25%;
+    --input: 120 15% 25%;
+    --ring: 120 40% 35%;
 
     --radius: 0.75rem;
   }
@@ -43,9 +42,11 @@
   }
 
   body {
-    @apply bg-gradient-to-br from-forest/95 to-forest-dark/95 text-foreground antialiased min-h-screen;
+    @apply bg-gradient-to-br from-forest/80 to-forest-dark/80 text-foreground antialiased min-h-screen;
     background-size: 30px 30px;
-    background-image: radial-gradient(circle, rgba(144,238,144,0.03) 1px, transparent 1px);
+    background-image: 
+      linear-gradient(to right, rgba(144,238,144,0.02) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(144,238,144,0.02) 1px, transparent 1px);
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -53,11 +54,11 @@
   }
   
   .glass-card {
-    @apply backdrop-blur-lg border border-forest-light/30 bg-forest-light/5 shadow-lg;
+    @apply backdrop-blur-lg border border-forest-light/20 bg-forest-light/10 shadow-lg;
   }
   
   .neon-border {
-    @apply border border-canopy/50 shadow-[0_0_15px_rgba(144,238,144,0.2)];
+    @apply border border-canopy/30 shadow-[0_0_15px_rgba(144,238,144,0.15)];
   }
   
   .section-title {
@@ -74,25 +75,26 @@
     background-image: url('/patterns/topo-lines.svg');
     background-size: 400px 400px;
     animation: topo-move 60s linear infinite;
+    opacity: 0.7;
   }
   
   .canopy-pattern {
-    @apply absolute inset-0 opacity-5 z-0;
+    @apply absolute inset-0 opacity-3 z-0;
     background-image: url('/patterns/canopy-pattern.svg');
     background-size: 200px 200px;
   }
   
   .satellite-dots {
-    @apply absolute inset-0 z-0;
+    @apply absolute inset-0 z-0 opacity-40;
     background-image: url('/patterns/satellite-dots.svg');
     background-size: 50px 50px;
   }
 
   section {
-    @apply relative border-b border-forest-light/10;
+    @apply relative border-b border-forest-light/5;
   }
 
   .container {
-    @apply max-w-7xl mx-auto relative z-10;
+    @apply max-w-7xl mx-auto relative z-10 px-4;
   }
 }
