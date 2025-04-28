@@ -1,7 +1,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, Calendar, Award, Map, Satellite, Forest, Mountain } from "lucide-react";
+import { ExternalLink, Calendar, Award, Map, Satellite, Trees, Mountain } from "lucide-react";
 
 const projects = [
   {
@@ -10,7 +10,7 @@ const projects = [
     tags: ["Remote Sensing", "SAR", "Carbon Stocks"],
     period: "2021-2023",
     highlight: true,
-    icon: Forest
+    icon: Trees
   },
   {
     title: "Identifying Deforestation Hotspots in Budongo Tropical Rainforest",
