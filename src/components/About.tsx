@@ -5,8 +5,9 @@ import { User, Mail, Phone, MapPin } from "lucide-react";
 
 const About = () => {
   return (
-    <section id="about" className="py-20">
-      <div className="container mx-auto px-4">
+    <section id="about" className="py-20 relative">
+      <div className="canopy-pattern"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <motion.h2 
           className="section-title"
           initial={{ opacity: 0, y: 20 }}
@@ -31,12 +32,12 @@ const About = () => {
             </p>
             
             <div className="mb-6">
-              <h4 className="text-neon-blue font-semibold mb-3">Research Interests</h4>
+              <h4 className="text-satellite font-semibold mb-3">Research Interests</h4>
               <div className="flex flex-wrap gap-2">
                 {["Advanced Remote Sensing", "Geospatial Modeling", "Geo AI", "Photogrammetry"].map((item) => (
                   <span 
                     key={item}
-                    className="px-3 py-1 bg-space-light rounded-full text-sm text-gray-300 border border-white/10"
+                    className="px-3 py-1 bg-forest-light/10 rounded-full text-sm text-gray-300 border border-forest-light/20"
                   >
                     {item}
                   </span>
@@ -45,11 +46,11 @@ const About = () => {
             </div>
             
             <div>
-              <h4 className="text-neon-blue font-semibold mb-3">Education</h4>
+              <h4 className="text-satellite font-semibold mb-3">Education</h4>
               <div className="glass-card p-4 rounded-lg">
                 <div className="flex justify-between mb-1">
                   <span className="font-medium text-white">BSc (Hons) Land Surveying and Geomatics</span>
-                  <span className="text-neon-blue">June 2023</span>
+                  <span className="text-canopy">June 2023</span>
                 </div>
                 <div className="text-gray-400 text-sm">Makerere University</div>
                 <p className="text-gray-300 mt-2 text-sm">
@@ -71,7 +72,7 @@ const About = () => {
               
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <User className="text-neon-blue mt-1" size={18} />
+                  <User className="text-canopy mt-1" size={18} />
                   <div>
                     <h4 className="font-medium text-white">Conservation Science & MEL Manager</h4>
                     <p className="text-gray-400 text-sm">The Jane Goodall Institute Uganda</p>
@@ -79,21 +80,21 @@ const About = () => {
                 </div>
                 
                 <div className="flex items-center gap-3">
-                  <Mail className="text-neon-blue" size={18} />
-                  <a href="mailto:michaeljurua@gmail.com" className="text-gray-300 hover:text-neon-blue transition-colors">
+                  <Mail className="text-canopy" size={18} />
+                  <a href="mailto:michaeljurua@gmail.com" className="text-gray-300 hover:text-satellite transition-colors">
                     michaeljurua@gmail.com
                   </a>
                 </div>
                 
                 <div className="flex items-center gap-3">
-                  <Phone className="text-neon-blue" size={18} />
-                  <a href="tel:+256784420183" className="text-gray-300 hover:text-neon-blue transition-colors">
+                  <Phone className="text-canopy" size={18} />
+                  <a href="tel:+256784420183" className="text-gray-300 hover:text-satellite transition-colors">
                     +256784420183
                   </a>
                 </div>
                 
                 <div className="flex items-start gap-3">
-                  <MapPin className="text-neon-blue mt-1" size={18} />
+                  <MapPin className="text-canopy mt-1" size={18} />
                   <address className="text-gray-300 not-italic">
                     Victoria Loop, Lubowa<br />
                     Kampala, Uganda

@@ -1,7 +1,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Code, Database, Globe, Layers } from "lucide-react";
+import { Code, Database, Globe, Layers, Map, Satellite } from "lucide-react";
 
 const SkillCategory = ({ title, skills, icon, delay }: { title: string; skills: string[]; icon: React.ReactNode; delay: number }) => (
   <motion.div 
@@ -12,7 +12,7 @@ const SkillCategory = ({ title, skills, icon, delay }: { title: string; skills: 
     viewport={{ once: true }}
   >
     <div className="flex items-center gap-3 mb-4">
-      <div className="w-10 h-10 rounded-full bg-neon-blue/20 flex items-center justify-center text-neon-blue">
+      <div className="w-10 h-10 rounded-full bg-forest-light/20 flex items-center justify-center text-canopy">
         {icon}
       </div>
       <h3 className="text-lg font-bold text-white">{title}</h3>
@@ -21,8 +21,8 @@ const SkillCategory = ({ title, skills, icon, delay }: { title: string; skills: 
       {skills.map((skill, i) => (
         <motion.div 
           key={i}
-          className="px-3 py-1 bg-space rounded-full text-sm border border-white/10 text-gray-300"
-          whileHover={{ scale: 1.05, backgroundColor: "rgba(0, 150, 255, 0.2)" }}
+          className="px-3 py-1 bg-forest rounded-full text-sm border border-forest-light/10 text-gray-300"
+          whileHover={{ scale: 1.05, backgroundColor: "rgba(144, 238, 144, 0.2)" }}
         >
           {skill}
         </motion.div>
@@ -56,8 +56,9 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20">
-      <div className="container mx-auto px-4">
+    <section id="skills" className="py-20 relative">
+      <div className="canopy-pattern"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <motion.h2 
           className="section-title"
           initial={{ opacity: 0, y: 20 }}
@@ -90,15 +91,15 @@ const Skills = () => {
           <h3 className="text-lg font-bold text-white mb-4">Languages</h3>
           <div className="grid sm:grid-cols-3 gap-4">
             <div>
-              <h4 className="font-medium text-neon-blue">English</h4>
+              <h4 className="font-medium text-satellite">English</h4>
               <p className="text-gray-300 text-sm">Distinguished level in Listening, Speaking, Reading, and Writing</p>
             </div>
             <div>
-              <h4 className="font-medium text-neon-blue">Runyoro</h4>
+              <h4 className="font-medium text-satellite">Runyoro</h4>
               <p className="text-gray-300 text-sm">Very good in speaking, listening and writing</p>
             </div>
             <div>
-              <h4 className="font-medium text-neon-blue">Luganda</h4>
+              <h4 className="font-medium text-satellite">Luganda</h4>
               <p className="text-gray-300 text-sm">Very good in speaking, listening and writing</p>
             </div>
           </div>

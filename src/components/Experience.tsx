@@ -37,7 +37,7 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-20 bg-space-dark">
+    <section id="experience" className="py-20 bg-forest-dark topo-background">
       <div className="container mx-auto px-4">
         <motion.h2 
           className="section-title"
@@ -53,7 +53,7 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <motion.div 
               key={index}
-              className="glass-card rounded-lg p-6 border-l-4 border-neon-blue"
+              className="glass-card rounded-lg p-6 border-l-4 border-canopy"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -62,10 +62,10 @@ const Experience = () => {
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
                 <div>
                   <h3 className="text-xl font-bold text-white flex items-center gap-2">
-                    <Briefcase className="text-neon-blue" size={18} />
+                    <Briefcase className="text-canopy" size={18} />
                     {exp.title}
                   </h3>
-                  <p className="text-neon-purple">{exp.company}</p>
+                  <p className="text-sensing-light">{exp.company}</p>
                 </div>
                 <div className="flex items-center gap-2 text-gray-400">
                   <Calendar size={16} />
@@ -76,7 +76,7 @@ const Experience = () => {
               <ul className="space-y-2 text-gray-300">
                 {exp.responsibilities.map((item, i) => (
                   <li key={i} className="flex items-start gap-2">
-                    <span className="text-neon-blue mt-1">•</span>
+                    <span className="text-canopy mt-1">•</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -88,7 +88,7 @@ const Experience = () => {
         <div className="flex justify-center mt-10">
           <motion.a
             href="#"
-            className="px-6 py-3 bg-transparent text-white border border-neon-blue rounded-lg font-medium hover:bg-neon-blue/10 transition-colors flex items-center gap-2"
+            className="px-6 py-3 bg-transparent text-white border border-satellite rounded-lg font-medium hover:bg-satellite/10 transition-colors flex items-center gap-2"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

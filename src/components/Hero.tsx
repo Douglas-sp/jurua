@@ -1,15 +1,17 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Leaf, Satellite } from "lucide-react";
 
 const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center relative overflow-hidden pt-16">
       {/* Background elements */}
       <div className="absolute inset-0 bg-hero-gradient -z-10"></div>
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-glow rounded-full blur-3xl -z-10 opacity-20"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-blue-glow rounded-full blur-3xl -z-10 opacity-10"></div>
+      <div className="canopy-pattern -z-10"></div>
+      <div className="satellite-dots -z-10"></div>
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-forest-glow rounded-full blur-3xl -z-10 opacity-20"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-forest-glow rounded-full blur-3xl -z-10 opacity-10"></div>
       
       <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
         <motion.div
@@ -18,7 +20,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
-            <span className="text-neon-blue">Conservation</span> Science & 
+            <span className="text-canopy">Conservation</span> Science & 
             <span className="block">Geospatial Technology</span>
           </h1>
           <p className="text-lg md:text-xl mb-8 text-gray-300 max-w-lg">
@@ -27,7 +29,7 @@ const Hero = () => {
           <div className="flex flex-wrap gap-4">
             <motion.a
               href="#contact"
-              className="px-6 py-3 bg-neon-blue text-white rounded-lg font-medium flex items-center gap-2 hover:bg-blue-500 transition-colors"
+              className="px-6 py-3 bg-forest text-white rounded-lg font-medium flex items-center gap-2 hover:bg-forest-light transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -35,7 +37,7 @@ const Hero = () => {
             </motion.a>
             <motion.a
               href="#experience"
-              className="px-6 py-3 bg-transparent text-white border border-white/20 rounded-lg font-medium hover:bg-white/10 transition-colors"
+              className="px-6 py-3 bg-transparent text-white border border-forest-light/30 rounded-lg font-medium hover:bg-forest/10 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -50,14 +52,14 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="relative hidden md:block"
         >
-          <div className="absolute inset-0 bg-blue-glow opacity-20 rounded-full blur-xl"></div>
+          <div className="absolute inset-0 bg-forest-glow opacity-20 rounded-full blur-xl"></div>
           <div className="relative w-full h-full aspect-square max-w-md mx-auto">
-            {/* Profile image container with neon border */}
+            {/* Profile image container with organic border */}
             <div className="w-full h-full rounded-full overflow-hidden neon-border p-1 animate-pulse-glow">
               <img
                 src="/lovable-uploads/00d70263-22ab-49e4-bc5a-7234caeb3502.png"
                 alt="Michael Jurua"
-                className="w-full h-full rounded-full object-cover bg-gray-800"
+                className="w-full h-full rounded-full object-cover bg-forest-dark"
                 loading="eager"
                 onError={(e) => {
                   e.currentTarget.src = "/placeholder.svg";
@@ -71,7 +73,10 @@ const Hero = () => {
               animate={{ y: [0, -10, 0] }}
               transition={{ repeat: Infinity, duration: 4 }}
             >
-              <span className="text-neon-green font-bold">GIS</span>
+              <span className="text-canopy font-bold flex items-center gap-1">
+                <Leaf size={16} />
+                GIS
+              </span>
             </motion.div>
             
             <motion.div 
@@ -79,7 +84,10 @@ const Hero = () => {
               animate={{ y: [0, 10, 0] }}
               transition={{ repeat: Infinity, duration: 5 }}
             >
-              <span className="text-neon-purple font-bold">Remote<br/>Sensing</span>
+              <span className="text-satellite font-bold flex items-center gap-1">
+                <Satellite size={16} />
+                Remote<br/>Sensing
+              </span>
             </motion.div>
           </div>
         </motion.div>

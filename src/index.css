@@ -5,33 +5,33 @@
 
 @layer base {
   :root {
-    --background: 222 47% 5%;
-    --foreground: 210 40% 98%;
+    --background: 120 30% 12%;
+    --foreground: 120 15% 98%;
 
-    --card: 222 47% 8%;
-    --card-foreground: 210 40% 98%;
+    --card: 120 30% 15%;
+    --card-foreground: 120 15% 98%;
 
-    --popover: 222 47% 5%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 120 30% 12%;
+    --popover-foreground: 120 15% 98%;
 
-    --primary: 210 100% 50%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 120 40% 25%;
+    --primary-foreground: 120 15% 98%;
 
-    --secondary: 217 32% 17%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 30 75% 31%;
+    --secondary-foreground: 120 15% 98%;
 
-    --muted: 217 32% 17%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 120 15% 20%;
+    --muted-foreground: 120 10% 75%;
 
-    --accent: 210 100% 40%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 210 100% 55%;
+    --accent-foreground: 120 15% 98%;
 
     --destructive: 0 62% 30%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 120 15% 98%;
 
-    --border: 217 32% 17%;
-    --input: 217 32% 17%;
-    --ring: 224 76% 48%;
+    --border: 120 15% 20%;
+    --input: 120 15% 20%;
+    --ring: 120 40% 25%;
 
     --radius: 0.75rem;
   }
@@ -43,9 +43,9 @@
   }
 
   body {
-    @apply bg-space text-foreground antialiased;
+    @apply bg-forest-dark text-foreground antialiased;
     background-size: 30px 30px;
-    background-image: radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-image: radial-gradient(circle, rgba(144,238,144,0.03) 1px, transparent 1px);
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -53,11 +53,11 @@
   }
   
   .glass-card {
-    @apply backdrop-blur-lg border border-white/10 bg-white/5 shadow-lg;
+    @apply backdrop-blur-lg border border-forest-light/20 bg-forest/10 shadow-lg;
   }
   
   .neon-border {
-    @apply border border-neon-blue/50 shadow-[0_0_10px_rgba(0,150,255,0.3)];
+    @apply border border-canopy/50 shadow-[0_0_10px_rgba(47,82,51,0.3)];
   }
   
   .section-title {
@@ -66,6 +66,25 @@
   
   .section-title::after {
     content: '';
-    @apply absolute bottom-0 left-0 w-1/2 h-0.5 bg-neon-blue rounded-full;
+    @apply absolute bottom-0 left-0 w-1/2 h-0.5 bg-satellite rounded-full;
+  }
+  
+  .topo-background {
+    @apply relative;
+    background-image: url('/patterns/topo-lines.svg');
+    background-size: 400px 400px;
+    animation: topo-move 60s linear infinite;
+  }
+  
+  .canopy-pattern {
+    @apply absolute inset-0 opacity-10 z-0;
+    background-image: url('/patterns/canopy-pattern.svg');
+    background-size: 200px 200px;
+  }
+  
+  .satellite-dots {
+    @apply absolute inset-0 opacity-20 z-0;
+    background-image: url('/patterns/satellite-dots.svg');
+    background-size: 50px 50px;
   }
 }

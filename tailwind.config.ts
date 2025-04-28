@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -67,7 +66,36 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom colors for our futuristic theme
+				forest: {
+					DEFAULT: '#2F5233',
+					light: '#3A6A3D',
+					dark: '#1E391F',
+				},
+				earth: {
+					DEFAULT: '#8B4513',
+					light: '#A86239',
+					dark: '#6B370F',
+				},
+				satellite: {
+					DEFAULT: '#1E90FF',
+					light: '#47A3FF',
+					dark: '#0066CC',
+				},
+				canopy: {
+					DEFAULT: '#90EE90',
+					light: '#B2F5B2',
+					dark: '#5DC560',
+				},
+				carbon: {
+					DEFAULT: '#424242',
+					light: '#616161',
+					dark: '#212121',
+				},
+				sensing: {
+					DEFAULT: '#9370DB',
+					light: '#B18CF0',
+					dark: '#7953C9',
+				},
 				space: {
 					DEFAULT: '#0A0F1E',
 					light: '#161D31',
@@ -100,17 +128,25 @@ export default {
 				'pulse-glow': {
 					'0%, 100%': { 
 						opacity: '1',
-						boxShadow: '0 0 10px 2px rgba(0, 150, 255, 0.3)'
+						boxShadow: '0 0 10px 2px rgba(47, 82, 51, 0.3)'
 					},
 					'50%': { 
 						opacity: '0.7',
-						boxShadow: '0 0 20px 2px rgba(0, 150, 255, 0.6)'
+						boxShadow: '0 0 20px 2px rgba(47, 82, 51, 0.6)'
 					},
 				},
 				'gradient-shift': {
 					'0%': { backgroundPosition: '0% 50%' },
 					'50%': { backgroundPosition: '100% 50%' },
 					'100%': { backgroundPosition: '0% 50%' },
+				},
+				'topo-move': {
+					'0%': { backgroundPosition: '0% 0%' },
+					'100%': { backgroundPosition: '100% 100%' },
+				},
+				'canopy-wave': {
+					'0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
+					'50%': { transform: 'translateY(-5px) rotate(2deg)' },
 				},
 			},
 			animation: {
@@ -119,12 +155,17 @@ export default {
 				'float': 'float 6s ease-in-out infinite',
 				'pulse-glow': 'pulse-glow 4s ease-in-out infinite',
 				'gradient-shift': 'gradient-shift 15s ease infinite',
+				'topo-move': 'topo-move 60s ease infinite',
+				'canopy-wave': 'canopy-wave 8s ease-in-out infinite',
 			},
 			backgroundImage: {
-				'grid-pattern': 'radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px)',
-				'hero-gradient': 'linear-gradient(45deg, rgba(10,15,30,1) 0%, rgba(22,29,49,1) 100%)',
-				'card-gradient': 'linear-gradient(135deg, rgba(22,29,49,0.8) 0%, rgba(10,15,30,0.9) 100%)',
-				'blue-glow': 'radial-gradient(circle, rgba(0,150,255,0.3) 0%, rgba(0,150,255,0) 70%)',
+				'grid-pattern': 'radial-gradient(circle, rgba(144,238,144,0.05) 1px, transparent 1px)',
+				'hero-gradient': 'linear-gradient(45deg, rgba(30,57,31,1) 0%, rgba(58,106,61,0.8) 100%)',
+				'card-gradient': 'linear-gradient(135deg, rgba(47,82,51,0.7) 0%, rgba(30,57,31,0.9) 100%)',
+				'forest-glow': 'radial-gradient(circle, rgba(47,82,51,0.3) 0%, rgba(47,82,51,0) 70%)',
+				'canopy-pattern': 'url("/patterns/canopy-pattern.svg")',
+				'topo-lines': 'url("/patterns/topo-lines.svg")',
+				'satellite-dots': 'url("/patterns/satellite-dots.svg")',
 			}
 		}
 	},

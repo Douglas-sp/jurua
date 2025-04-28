@@ -8,21 +8,21 @@ const Navbar = () => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-space/80 border-b border-white/10"
+      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-forest-dark/80 border-b border-forest-light/10"
     >
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <motion.div 
           className="text-xl font-bold text-white"
           whileHover={{ scale: 1.05 }}
         >
-          <span className="text-neon-blue">M</span>ichael <span className="text-neon-blue">J</span>urua
+          <span className="text-canopy">M</span>ichael <span className="text-canopy">J</span>urua
         </motion.div>
         <nav className="hidden md:flex space-x-8">
           {["Home", "About", "Experience", "Projects", "Skills", "Contact"].map((item) => (
             <motion.a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="text-gray-300 hover:text-neon-blue transition-colors duration-300"
+              className="text-gray-300 hover:text-canopy transition-colors duration-300"
               whileHover={{ scale: 1.05 }}
             >
               {item}
