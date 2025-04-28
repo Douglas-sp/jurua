@@ -43,7 +43,7 @@
   }
 
   body {
-    @apply bg-forest-dark text-foreground antialiased;
+    @apply bg-gradient-to-br from-forest/95 to-forest-dark/95 text-foreground antialiased min-h-screen;
     background-size: 30px 30px;
     background-image: radial-gradient(circle, rgba(144,238,144,0.03) 1px, transparent 1px);
   }
@@ -53,11 +53,11 @@
   }
   
   .glass-card {
-    @apply backdrop-blur-lg border border-forest-light/20 bg-forest/10 shadow-lg;
+    @apply backdrop-blur-lg border border-forest-light/30 bg-forest-light/5 shadow-lg;
   }
   
   .neon-border {
-    @apply border border-canopy/50 shadow-[0_0_10px_rgba(47,82,51,0.3)];
+    @apply border border-canopy/50 shadow-[0_0_15px_rgba(144,238,144,0.2)];
   }
   
   .section-title {
@@ -70,21 +70,29 @@
   }
   
   .topo-background {
-    @apply relative;
+    @apply relative overflow-hidden;
     background-image: url('/patterns/topo-lines.svg');
     background-size: 400px 400px;
     animation: topo-move 60s linear infinite;
   }
   
   .canopy-pattern {
-    @apply absolute inset-0 opacity-10 z-0;
+    @apply absolute inset-0 opacity-5 z-0;
     background-image: url('/patterns/canopy-pattern.svg');
     background-size: 200px 200px;
   }
   
   .satellite-dots {
-    @apply absolute inset-0 opacity-20 z-0;
+    @apply absolute inset-0 z-0;
     background-image: url('/patterns/satellite-dots.svg');
     background-size: 50px 50px;
+  }
+
+  section {
+    @apply relative border-b border-forest-light/10;
+  }
+
+  .container {
+    @apply max-w-7xl mx-auto relative z-10;
   }
 }
